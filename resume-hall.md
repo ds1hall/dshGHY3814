@@ -1,10 +1,10 @@
-#Douglas S. Hall, CPBE
+# Douglas S. Hall, CPBE
 
-##Broadcast Systems Engineer - Retired
+## Broadcast Systems Engineer - Retired
 
 Certified Professional Broadcast Engineer by the Society of Broadcast Engineers
 
-##Expertise
+## Expertise
 
 Senior Systems Engineering of large scale Broadcasting and Satellite facilities:
 * Design
@@ -13,11 +13,11 @@ Senior Systems Engineering of large scale Broadcasting and Satellite facilities:
 
 Video wall display systems using multi-monitor or rear projection
 
-##Education
+## Education
 
 Electrical Engineering, Virginia Tech, Blacksburg, VA
 
-##Experience
+## Experience
 
 * Technical Engineering at Public Broadcasting Service, Washington, DC
 * Member Commericial Services Engineer, GE Americon, Princeton, NJ
