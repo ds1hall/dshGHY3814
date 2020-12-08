@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<!-- Page two - The Tour -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Douglas Hall">
+  <meta name="description" content="GHY3814 Final Project">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" >
+  <title>My Tour Map</title>
+  <style>
+
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 84%;
+      height: 100%;
+      margin-left: 15%;
+      }
+
+    #sidebar {
+      position: absolute;
+      top: 0;
+      width: 14.5%;
+      height: 99%;
+      background-color: hsl(187, 12%, 72%);
+      font-family: "arial";
+      border: 5px solid orange;
+      text-align: center;
+    }
+    .btn-group button {
+      background-color: #4caf50;
+      border: 5px solid hsl(187, 12%, 72%);
+      border-radius: 10px;
+      color: white;  <!--  // color of text -->
+      padding: 40px 40px;
+      cursor: pointer;
+      width: 60%; // my selection
+      display: block; // buttons appear in vertical
+      margin: 10px 1px 10px 1px;
+      font-size: 20px;
+      }
+
+    .btn-group button:not(:last-child) {
+       border-bottom: none;
+       }
+
+    .btn-group button:hover {
+      background-color: red;
+      border: 5px solid hsl(187,12%, 72%);
+      border-radius: 10px;
+      color: black;
+    }
+
+  </style>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+
+</head>
+
+<body>
+  <div id="sidebar">
+    <p style="color:darkblue; border-style: solid; border-color: darkblue; padding: 5px;font-size:24px;background-color: gray;">
+      Some of my<br>Favorite Places
+    </p>
+    <div class="btn-group">
+      <button onclick="CenterMe()">Center Map</button> <!-- locid = 0 -->
+      <button onclick="gotoLoc(1)">NAVM</button>  <!-- locid = 1 -->
+      <button onclick="gotoLoc(2)">Buffalo Dancer</button> <!-- locid = 2 -->
+      <button onclick="gotoLoc(3)">Infinity</button>  <!-- locid = 3 -->
+      <button onclick="gotoLoc(4)">Continuum</button>  <!-- locid = 4 -->
+      <button onclick="gotoLoc(5)">Zero<br>Milestone</button>  <!-- locid = 5 -->
+      <button onclick="gotoLoc(7)">Jefferson<br>Pier</button>  <!-- locid = 6 -->
+      <button onclick="gotoLoc(10)">Vietnam<br>Memorial</button>  <!-- locid = 7 -->
+      <button onclick="gotoLoc(11)">Three Soldiers</button>  <!-- locid = 8 -->
+      <button onclick="gotoLoc(12)">The Nurses</button>  <!-- locid = 9 -->
+      <button onclick="gotoLoc(8)">Albert Einstein</button>  <!-- locid = 10 -->
+      <button onclick="gotoLoc(13)">Lone Sailor</button>  <!-- locid = 11 -->
+      <button onclick="gotoLoc(9)">US Naval<br>Observatory</button>  <!-- locid = 12 -->
+      <button onclick="gotoLoc(6)">Ad Astra</button>
+    </div>
+
+  </div>
+
+  <!-- Deine the map container -->
+  <div id=map></div>
+  <script src+"https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<script>
+  var mapcenterlat = 38.90;
+  var mapcenterlong = -77.0380;
+  var mapcenterzoom = 14;
+  // variable to us in a gotoLoc function
+  var loclat = null;
+  var loclong = null;
+  var loczoom = null;
+  var myNewCoord = null;
+
+  var map = L.map ('map').setView([mapcenterlat,mapcenterlong], mapcenterzoom);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.{ext}', {
+    attribution: 'Map tiles &copy <a href="https://openstreetmap.org"> OpenStreetMap.org</a>,<a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>&mdash; Map data by Douglas Hall',
+    ext: 'png'
+  }).addTo(map);
+
+  L.control.scale({position: 'bottomleft'}).addTo(map);
+
+  var POI = null;
+  POI = L.geoJson.ajax("assets/PointsOfInterest.geojson", {
+    
+    onEachFeature: onEachFeature
+  }).addTo(map);
+
+
+  function onEachFeature(feature, layer) {
+    layer.bindPopup('<center>'+ feature.properties.MAP_LEGEND + '</center><center>'+ feature.properties.URL + '</center>');
+
+  }
+  function CenterMe() {
+    map.setView([mapcenterlat, mapcenterlong], mapcenterzoom);
+    return;
+    }
+
+  function gotoLoc(x) {
+    var locid = x;
+
+    alert("Waht I got " + locid);
+  }
+
+
+  </script>
+
+</body>
+
+</html>

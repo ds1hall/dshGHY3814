@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Douglas Hall">
+  <meta name="description" content="GHY3814 Final Project">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+  <title>My Washington DC</title>
+  <style>
+
+    h1 {
+      color: blue;
+      font-family: arial;
+      text-align: center;
+      }
+
+    h2 {
+      color: darkblue;
+      font-family: arial;
+      text-align: center;
+      }
+
+    p {
+      font-family: arial;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 50px;
+      border: 5px solid #fa80c0;
+      padding: 2px;
+      }
+
+    figcaption {
+      color: black;
+      font-family: arial;
+      padding: 6px;
+      text-align: center;
+      }
+
+   .container {
+     height: 200px;
+     position: relative;
+     border: none;
+     }
+
+   .center {
+     margin: 0;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+  -  ms-transform: translate(-50%, -50%);
+     transform: translate(-50%, -50%);
+     }
+
+   .button {
+
+        background-color: #b440b3;
+        border: 5px solid hsl(187, 12%, 72%);
+        border-radius: 10px;
+        color: white;  <!--  // color of text -->
+        padding: 50px 50px;
+        cursor: pointer;
+        width: 100%; // my selection
+        display: block; // buttons appear in vertical
+        margin: 10px 1px 10px 1px;
+        font-size: 24px;
+        }
+
+
+  </style>
+</head>
+
+<body style= "background-color: hsl(200, 69%, 93%)">
+  <header>
+    <h1>My favorite sites in Washington DC</h1>
+    <h2>My GHY3814 Fall 2020 Final project - Douglas Hall</h2>
+    <p>I was commissioned by a local newspaper to create an interactive map based on a recent story in the Washington Post about the dedication of the "Native American Veterans Memorial" on November 11, 2020.<br>
+      The proposed map was to show the statues and sculptures of the Smithsonian Institution.  As I researched this project, I realized there are hundreds of statues and sculptures.  I convinced the editor to allow<br>
+      me to map 13 of my favorite sites as multiple 'tourists' webmaps already exist.</p>
+    <p>I grew up in the Washington DC area.  Needless to say school field trips included the Smithsonian Institution and all the monuments and memorials on the National Mall and elsewhere in the metro area.<br>
+    I am a service veteran and an engineer.  My 'favorites' may be a bit obscure or eclectic.  I hope you enjoy this tour.</p>
+  </header>
+  <figure>
+
+    <img src="img/The_Castle.jpg" width="500" height="300" width="50%"  >
+    <figcaption>"The Castle" - Smithsonian Institution</figcaption>
+  </figure>
+
+  <div class="container">
+    <div class="center">
+       <button class = "button" onclick="location.href = 'tour.html'">Take the Tour</button>
+    </div>
+  </div>
+
+<!-- Add an image flip through here of the 15 sites -->
+<!-- Add an "Enter" button to bring up the next page -->
+
+</body>
+</html>

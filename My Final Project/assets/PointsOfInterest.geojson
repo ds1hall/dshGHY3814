@@ -1,0 +1,226 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.01559,38.88854 ]
+    },
+    "properties": {
+    "ID":1,
+    "OWNER":"SI",
+    "ZOOM":19,
+    "MAP_LEGEND":"Native American Veterans Memorial",
+    "DED_YEAR":2020,
+    "DESC_FILE":"NAVM.js",
+    "IMG_FILE":"img/Native_American_Veterans_Memorial.jpg",
+    "URL":"https://americanindian.si.edu/visit/washington/nnavm"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.01602,38.88866 ]
+    },
+    "properties": {
+    "ID":2,
+    "OWNER":"SI",
+    "ZOOM":19,
+    "MAP_LEGEND":"Buffalo Dancer II",
+    "DED_YEAR":2010,
+    "DESC_FILE":"BDII.js",
+    "IMG_FILE":"img/Buffalo_Dancer_II.jpg",
+    "URL":"https://dctourguideonline.com/buffalo-dancer-ii-offers-prayers/"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.0301,38.890767 ]
+    },
+    "properties": {
+    "ID":3,
+    "OWNER":"SI",
+    "ZOOM":19,
+    "MAP_LEGEND":"Infinity Scuplture",
+    "DED_YEAR":1967,
+    "DESC_FILE":"INFI.js",
+    "IMG_FILE":"img/Infinity.jpg",
+    "URL":"https://www.waymarking.com/waymarks/WMXG2K_Infinity_Washington_DC"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.03655,38.88981 ]
+    },
+    "properties": {
+    "ID":4,
+    "OWNER":"NPS",
+    "ZOOM":19,
+    "MAP_LEGEND":"Jefferson Pier",
+    "DED_YEAR":1889,
+    "DESC_FILE":"TJPR.js",
+    "IMG_FILE":"img/Jefferson_Pier_Marker.jpg",
+    "URL":"https://www.atlasobscura.com/places/jefferson-pier-marker"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.03656,38.89512 ]
+    },
+    "properties": {
+    "ID":5,
+    "OWNER":"NPS",
+    "ZOOM":19,
+    "MAP_LEGEND":"Zero Milestone",
+    "DED_YEAR":1923,
+    "DESC_FILE":"ZERO.js",
+    "IMG_FILE":"img/Zero_Milestone.jpg",
+    "URL":"http://mallhistory.org/items/show/5"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.01984,38.88862 ]
+    },
+    "properties": {
+    "ID":6,
+    "OWNER":"SI",
+    "ZOOM":19,
+    "MAP_LEGEND":"Ad Astra",
+    "DED_YEAR":1976,
+    "DESC_FILE":"ADAS.js",
+    "IMG_FILE":"img/Ad_Astra_Sculpture.jpg",
+    "URL":"https://airandspace.si.edu/collection-objects/ad-astra/nasm_A19780170000"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.01989,38.88776 ]
+    },
+    "properties": {
+    "ID":7,
+    "OWNER":"SI",
+    "ZOOM":19,
+    "MAP_LEGEND":"Continuum",
+    "DED_YEAR":1976,
+    "DESC_FILE":"CTIN.js",
+    "IMG_FILE":"img/Continuum_sculpture.jpg",
+    "URL":"https://airandspace.si.edu/collection-objects/continuum/nasm_A19780172000"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.04841,38.89243 ]
+    },
+    "properties": {
+    "ID":8,
+    "OWNER":"NAS.org",
+    "ZOOM":19,
+    "MAP_LEGEND":"Albert Einstein Statue",
+    "DED_YEAR":1979,
+    "DESC_FILE":"EINS.js",
+    "IMG_FILE":"img/Einstein_Statue.jpg",
+    "URL":"http://www.nasonline.org/about-nas/visiting-nas/nas-building/the-einstein-memorial.html"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.06682,38.9219 ]
+    },
+    "properties": {
+    "ID":9,
+    "OWNER":"usno.navy.mil",
+    "ZOOM":18,
+    "MAP_LEGEND":"US Naval Observatory",
+    "DED_YEAR":null,
+    "DESC_FILE":"USNO.js",
+    "IMG_FILE":"img/USNO_Master_Clock.jpg",
+    "URL":"https://www.usno.navy.mil/USNO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.04771,38.89133 ]
+    },
+    "properties": {
+    "ID":10,
+    "OWNER":"NPS",
+    "ZOOM":18,
+    "MAP_LEGEND":"Vietnam Veterans Memorial",
+    "DED_YEAR":1982,
+    "DESC_FILE":"VETS.js",
+    "IMG_FILE":"img/Vietnam_vets_memorial.jpg",
+    "URL":"https://www.nps.gov/vive/index.htm"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.04819,38.89058 ]
+    },
+    "properties": {
+    "ID":11,
+    "OWNER":"VVMF",
+    "ZOOM":18,
+    "MAP_LEGEND":"The Three Soldiers",
+    "DED_YEAR":1984,
+    "DESC_FILE":"THRE.js",
+    "IMG_FILE":"img/The_Three_Soldiers.jpg",
+    "URL":"https://www.nps.gov/places/000/vietnam-veterans-memorial-three-servicemen-statue.htm"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.04699,38.89061 ]
+    },
+    "properties": {
+    "ID":12,
+    "OWNER":"NPS",
+    "ZOOM":18,
+    "MAP_LEGEND":"Vietnam Women's Memorial",
+    "DED_YEAR":1993,
+    "DESC_FILE":"NURS.js",
+    "IMG_FILE":"img/Vietnam_Women_memorial.jpg",
+    "URL":"https://www.nps.gov/thingstodo/vietnam-womens-memorial.htm"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.02294,38.89418 ]
+    },
+    "properties": {
+    "ID":13,
+    "OWNER":"NavyMemorial.org",
+    "ZOOM":18,
+    "MAP_LEGEND":"US Navy Memorial Plaza",
+    "DED_YEAR":1987,
+    "DESC_FILE":"LONE.js",
+    "IMG_FILE":"img/lone_sailor_statue.jpg",
+    "URL":"https://www.navymemorial.org/the-lone-sailor"
+    }
+  }
+]
+}
