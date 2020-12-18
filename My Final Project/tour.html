@@ -69,16 +69,16 @@
       <button onclick="gotoLoc(1)">NAVM</button>  <!-- locid = 1 -->
       <button onclick="gotoLoc(2)">Buffalo Dancer</button> <!-- locid = 2 -->
       <button onclick="gotoLoc(3)">Infinity</button>  <!-- locid = 3 -->
-      <button onclick="gotoLoc(4)">Continuum</button>  <!-- locid = 4 -->
+      <button onclick="gotoLoc(7)">Continuum</button>  <!-- locid = 7 -->
       <button onclick="gotoLoc(5)">Zero<br>Milestone</button>  <!-- locid = 5 -->
-      <button onclick="gotoLoc(7)">Jefferson<br>Pier</button>  <!-- locid = 6 -->
-      <button onclick="gotoLoc(10)">Vietnam<br>Memorial</button>  <!-- locid = 7 -->
-      <button onclick="gotoLoc(11)">Three Soldiers</button>  <!-- locid = 8 -->
-      <button onclick="gotoLoc(12)">The Nurses</button>  <!-- locid = 9 -->
-      <button onclick="gotoLoc(8)">Albert Einstein</button>  <!-- locid = 10 -->
-      <button onclick="gotoLoc(13)">Lone Sailor</button>  <!-- locid = 11 -->
-      <button onclick="gotoLoc(9)">US Naval<br>Observatory</button>  <!-- locid = 12 -->
-      <button onclick="gotoLoc(6)">Ad Astra</button>
+      <button onclick="gotoLoc(4)">Jefferson<br>Pier</button>  <!-- locid = 4 -->
+      <button onclick="gotoLoc(10)">Vietnam<br>Memorial</button>  <!-- locid = 10 -->
+      <button onclick="gotoLoc(11)">Three Soldiers</button>  <!-- locid = 11 -->
+      <button onclick="gotoLoc(12)">The Nurses</button>  <!-- locid = 12 -->
+      <button onclick="gotoLoc(8)">Albert Einstein</button>  <!-- locid = 8 -->
+      <button onclick="gotoLoc(13)">Lone Sailor</button>  <!-- locid = 13 -->
+      <button onclick="gotoLoc(9)">US Naval<br>Observatory</button>  <!-- locid = 9 -->
+      <button onclick="gotoLoc(6)">Ad Astra</button>  <!-- locid = 6 -->
     </div>
 
   </div>
@@ -92,10 +92,11 @@
   var mapcenterlong = -77.0380;
   var mapcenterzoom = 14;
   // variable to us in a gotoLoc function
-  var loclat = null;
-  var loclong = null;
-  var loczoom = null;
-  var myNewCoord = null;
+  var loclat = [];
+  var loclong = [];
+  var loczoom = [];
+
+  var EFC = 0;  // Each Feature Counter - Array Index for map points
 
   var map = L.map ('map').setView([mapcenterlat,mapcenterlong], mapcenterzoom);
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.{ext}', {
@@ -107,24 +108,37 @@
 
   var POI = null;
   POI = L.geoJson.ajax("assets/PointsOfInterest.geojson", {
-    
     onEachFeature: onEachFeature
-  }).addTo(map);
-
+    }).addTo(map);
 
   function onEachFeature(feature, layer) {
     layer.bindPopup('<center>'+ feature.properties.MAP_LEGEND + '</center><center>'+ feature.properties.URL + '</center>');
+    /* Parse out the latitude and longitude into separate indexed arrays */
+
+    var featlatlng = feature.geometry.coordinates;
+    var strlatlng = featlatlng.toString();
+    var pos = strlatlng.indexOf(",");
+    var len = strlatlng.length;
+
+    loclong[EFC] = Number(strlatlng.slice(0,pos));
+    loclat[EFC] = Number(strlatlng.slice(pos+1,len));
+    loczoom[EFC] = feature.properties.ZOOM;
+
+    EFC++;
 
   }
+
   function CenterMe() {
-    map.setView([mapcenterlat, mapcenterlong], mapcenterzoom);
+    map.flyTo([mapcenterlat, mapcenterlong], mapcenterzoom)-1;
     return;
     }
 
   function gotoLoc(x) {
-    var locid = x;
 
-    alert("Waht I got " + locid);
+    var locid = x -1;
+    map.flyTo([loclat[locid], loclong[locid]], loczoom[locid]-1);
+
+    return;
   }
 
 
